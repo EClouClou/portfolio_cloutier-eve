@@ -1,0 +1,11 @@
+//PARTIALS
+@use "partials/mixins" as mixins;
+@use "partials/variables" as var;
+
+//MODULES
+@use "body";
+@use "header";
+@use "footer";
+
+//COMPONENTS
+@use "buttons";

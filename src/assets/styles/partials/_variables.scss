@@ -1,0 +1,39 @@
+//COLORS
+$vert: #4f7302;
+$offWhite: #f3ecdc;
+
+$color-primary: $vert;
+$color-primaryP: $offWhite;
+
+//FONTS
+@font-face {
+  font-family: "GaramondItalic";
+  src: url(../fonts/ebgaramond-italic-variablefont_wght-webfont.woff2)
+      format("woff2"),
+    url(../fonts/ebgaramond-italic-variablefont_wght-webfont.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url(../fonts/ebgaramond-variablefont_wght-webfont.woff2) format("woff2"),
+    url(../fonts/ebgaramond-variablefont_wght-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: "RalewayItalic";
+  src: url(../fonts/raleway-italic-variablefont_wght-webfont.woff2)
+      format("woff2"),
+    url(../fonts/raleway-italic-variablefont_wght-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(../fonts/raleway-variablefont_wght-webfont.woff2) format("woff2"),
+    url(../fonts/raleway-variablefont_wght-webfont.woff) format("woff");
+}
+
+// BREAKPOINTS
+$small: 640px;
+$medium: 768px;
+$large: 1024px;
