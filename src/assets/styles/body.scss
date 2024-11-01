@@ -2,6 +2,17 @@
 @use "partials/mixins" as mixins;
 @use "partials/variables" as var;
 
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: "GaramondItalic";
+  font-size: 8rem;
+  text-align: center;
 }
