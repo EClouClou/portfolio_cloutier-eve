@@ -1,1 +1,31 @@
-@use 'variables' as var;
+@use "variables" as var;
+
+@mixin button-reset(
+  $button-type: transparent,
+  $weight: 900,
+  $size: 16,
+  $text: var.$color-black,
+  $transform: uppercase,
+  $cursor: pointer
+) {
+  background: $button-type;
+  border: none;
+  font-family: "Raleway";
+  color: $text;
+  font-weight: $weight;
+  font-size: $size;
+  text-transform: $transform;
+  cursor: $cursor;
+}
+
+@mixin tablet {
+  @media (min-width: var.$medium) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: var.$large) {
+    @content;
+  }
+}

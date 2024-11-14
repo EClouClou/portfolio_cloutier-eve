@@ -1,3 +1,81 @@
 //PARTIALS
 @use "partials/mixins" as mixins;
 @use "partials/variables" as var;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__name {
+    transform: translateY(-3px);
+  }
+
+  &__img {
+    color: var.$black;
+    width: 2.12rem;
+  }
+
+  &__menu {
+    display: flex;
+    @include mixins.tablet {
+      display: none;
+    }
+  }
+
+  &__list {
+    > ul {
+      display: none;
+      flex-direction: row;
+      gap: 1.5rem;
+      list-style-type: none;
+      @include mixins.tablet {
+        display: flex;
+      }
+    }
+  }
+}
+
+.hero__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20rem 0;
+  img {
+    width: 6.875rem;
+  }
+
+  &__title {
+    position: relative;
+  }
+
+  &__name {
+    position: absolute;
+  }
+
+  & &__logo {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    transform: translateY(-1rem);
+    right: 0;
+    width: 68px;
+    @include mixins.tablet {
+      width: 110px;
+      transform: translateY(-1.5rem);
+      transition: 2s ease;
+    }
+  }
+}

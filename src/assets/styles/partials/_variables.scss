@@ -1,9 +1,13 @@
 //COLORS
 $vert: #4f7302;
-$offWhite: #f3ecdc;
+$white: #f3ecdc;
+$offWhite: #f8f9ff;
+$black: #1e1e1e;
 
 $color-primary: $vert;
-$color-primaryP: $offWhite;
+$color-offWhite: $offWhite;
+$color-white: $white;
+$color-black: $black;
 
 //FONTS
 @font-face {
