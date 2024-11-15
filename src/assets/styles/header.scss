@@ -52,7 +52,7 @@
 .hero {
   display: inline-flex;
   flex-direction: column;
-  padding: 20rem 0;
+  padding: 20rem 0 5.5rem 0;
   img {
     width: 6.875rem;
   }
@@ -75,7 +75,7 @@
     @include mixins.tablet {
       width: 110px;
       transform: translateY(-1.5rem);
-      transition: 2s ease;
+      transition: 0.5s ease;
     }
   }
 }
