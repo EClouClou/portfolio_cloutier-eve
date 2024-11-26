@@ -11,12 +11,12 @@
     <title>porfolio | Eve Cloutier</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="navbar">
         <div class="navbar__brand">
           <img
             class="navbar__img"
-            src="./assets/img/logo-eve-noir.svg"
+            src="./static/img/logo-eve-noir.svg"
             alt="Logo Eve Cloutier"
           />
           <h5 class="navbar__name">Eve Cloutier</h5>
@@ -64,7 +64,7 @@
             portfolio
             <div class="hero__logo">
               <img
-                src="./assets/img/logo-eve-noir.svg"
+                src="./static/img/logo-eve-noir.svg"
                 alt="Logo Eve Cloutier"
               />
             </div>
@@ -76,7 +76,7 @@
       <section class="about">
         <header class="about__arrow">
           <img
-            src="./assets/img/arrow-1.svg"
+            src="./static/img/arrow-1.svg"
             alt="Flèche vers la section à propos"
           />
         </header>
@@ -90,12 +90,12 @@
               suis motivée par les nouveaux défis!
             </h4>
             <h4>
-              Je m'engage à donner le meilleur  de moi-même et à fournir des
+              Je m'engage à donner le meilleur de moi-même et à fournir des
               résultats de qualité.
             </h4>
           </div>
           <div class="about__photo">
-            <img src="./assets/img/photo-eve.jpg" alt="Photo de Eve Cloutier" />
+            <img src="./static/img/photo-eve.jpg" alt="Photo de Eve Cloutier" />
           </div>
         </div>
         <div class="about__profile">
@@ -120,8 +120,19 @@
           </div>
         </div>
       </section>
-
-      <section></section>
+      <main>
+        <section class="grid">
+          <div class="projets-holder"></div>
+        </section>
+      </main>
+      <footer class="p-50">PMI - 2024</footer>
+      <div class="modale-holder hidden">
+        <header>
+          <button data-modal-close>FERMER</button>
+        </header>
+        <div class="modale-contenu flex"></div>
+      </div>
+      <script src="./assets/js/projets.js" type="module"></script>
 
       <section></section>
     </main>

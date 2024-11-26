@@ -7,6 +7,7 @@
 @use "header";
 @use "main.scss";
 @use "footer";
+@use "grid";
 
 //COMPONENTS
 @use "buttons";
@@ -28,11 +29,6 @@ h2 {
   font-size: 3.125rem;
   font-weight: 400;
   letter-spacing: -0.5%;
-  display: inline-flex;
-  background-color: var.$beige;
-  padding: 0.625rem;
-  border-radius: 10px;
-  transform: translateY(46px);
 }
 
 h3 {

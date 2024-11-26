@@ -1,0 +1,49 @@
+@use "sass:list";
+
+$colNum: 12; // Largeur de 12 colonnes
+$colArray: "";
+
+@for $i from 1 through $colNum {
+  // Génère une liste de nombres de 1 à 12 (colonnes)
+  $colArray: list.append($colArray, $i, comma);
+}
+
+@each $col in $colArray {
+  // Pour chaque colonne,
+  .col-start-#{$col} {
+    // Position début de colonne
+    grid-column-start: $col;
+  }
+
+  .col-span-#{$col} {
+    // Position fin de colonne
+    grid-column-end: span $col;
+  }
+}
+
+$rowNum: 5; // Largeur de 5 rangées
+$rowArray: "";
+
+@for $i from 1 through $rowNum {
+  // Pour chaque rangée,
+  $rowArray: list.append($rowArray, $i, comma);
+}
+
+@each $row in $rowArray {
+  .row-start-#{$row} {
+    // Position début de la rangée
+    grid-row-start: $row;
+  }
+
+  .row-span-#{$row} {
+    // Position fin de la rangée
+    grid-row-end: span $row;
+  }
+}
+
+$areasArray: "";
+@for $i from 0 through 6 {
+  .tuile-#{$i} {
+    grid-area: tuile#{$i};
+  }
+}
