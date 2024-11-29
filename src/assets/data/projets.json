@@ -2,7 +2,9 @@
   {
     "id": "1",
     "name": "Projet 1",
-    "img": ".src/static/img/a2-maquette.jpg",
+    "category": "imprimé",
+    "kind": "bulletin",
+    "img": "./static/img/a2-maquette.jpg",
     "imgAlt": "bulletin-porcima",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
     "date": "2024-10-24",
@@ -16,6 +18,8 @@
   {
     "id": "2",
     "name": "Projet 2",
+    "category": "imprimé",
+    "kind": "bulletin",
     "img": "./static/img/halloween-dagobert-affiche.jpg",
     "imgAlt": "Image du projet 2",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
@@ -25,12 +29,14 @@
       "behance": "https://github.com/becma/ex_json",
       "github": "https://github.com/becma/ex_json"
     },
-    "stack": ["html", "sass", "javascript", "npm", "git"],
+    "stack": ["photoshop"],
     "gridArea": 2
   },
   {
     "id": "3",
     "name": "Projet 3",
+    "category": "imprimé",
+    "kind": "bulletin",
     "img": ".src/static/img/design_dk_magazine.jpg",
     "imgAlt": "Image du projet 3",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
@@ -45,6 +51,8 @@
   {
     "id": "4",
     "name": "Projet 4",
+    "category": "imprimé",
+    "kind": "bulletin",
     "img": "./static/img/auberge-baker-menu.jpg",
     "imgAlt": "Image du projet 4",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
@@ -59,6 +67,8 @@
   {
     "id": "5",
     "name": "Projet 5",
+    "category": "imprimé",
+    "kind": "bulletin",
     "img": "./static/img/fermier-de-famille-maquette.jpg",
     "imgAlt": "Image du projet 5",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
@@ -73,6 +83,8 @@
   {
     "id": "6",
     "name": "Projet 6",
+    "category": "imprimé",
+    "kind": "bulletin",
     "img": "./static/img/auberge-baker-menu.jpg",
     "imgAlt": "Image du projet 6",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",

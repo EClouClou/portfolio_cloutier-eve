@@ -1,11 +1,11 @@
 @use "variables" as var;
 
+// BUTTON
 @mixin button-reset(
   $button-type: transparent,
   $weight: 900,
   $size: 16,
   $text: var.$color-black,
-  $transform: uppercase,
   $cursor: pointer
 ) {
   background: $button-type;
@@ -14,10 +14,55 @@
   color: $text;
   font-weight: $weight;
   font-size: $size;
-  text-transform: $transform;
   cursor: $cursor;
 }
 
+// REM BASE
+$font-size-base: 16px;
+
+@function toRem($value) {
+  @return $value * 1rem;
+}
+
+// FLEX
+@mixin flex-center($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// GAP
+$gapI: 0;
+
+@while $gapI <= 100 {
+  .g-#{$gapI} {
+    gap: toRem($gapI);
+  }
+
+  $gapI: $gapI + 1;
+}
+
+@mixin card-shadow {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 30px;
+}
+
+// À revoir : ne fonctionne pas bien
+@mixin text-shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 3px -30px 36px -28px inset;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-image: linear-gradient(
+    to top,
+    var.$color-offWhite,
+    transparentize(var.$color-offWhite, 1)
+  );
+}
+
+// RESPONSIVE
 @mixin tablet {
   @media (min-width: var.$medium) {
     @content;

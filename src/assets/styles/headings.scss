@@ -88,3 +88,71 @@ p {
   font-weight: 400;
   letter-spacing: 0.1%;
 }
+
+.hidden {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.rounded {
+  border-radius: 30px;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.bg-test {
+  background-color: magenta;
+}
+
+.card-shadow {
+  @include mixins.card-shadow;
+}
+
+.text-shadow {
+  @include mixins.text-shadow;
+}
+
+.w-90 {
+  display: flex;
+  justify-content: stretch;
+  width: 92.2%;
+  max-width: 100%;
+}

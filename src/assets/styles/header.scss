@@ -5,19 +5,14 @@
 @use "grid";
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.flex-center;
 
   & h2 {
     background-color: var.$beige;
   }
 
   &__brand {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center;
     gap: 1.5rem;
   }
 
@@ -51,8 +46,9 @@
 }
 
 .hero__wrapper {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+  @include mixins.flex-center(column);
 }
 
 .hero {
@@ -72,8 +68,7 @@
   }
 
   & &__logo {
-    display: flex;
-    justify-content: flex-end;
+    @include mixins.flex-center(flex-end);
     position: absolute;
     transform: translateY(-1rem);
     right: 0;
@@ -86,10 +81,6 @@
   }
 }
 
-.about h2 {
-  background-color: var.$beige;
-  display: inline-flex;
-  padding: 0.625rem;
-  border-radius: 10px;
-  transform: translateY(46px);
+.header__arrow {
+  padding-top: 5.5rem;
 }

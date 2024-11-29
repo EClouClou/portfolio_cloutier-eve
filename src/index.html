@@ -70,16 +70,16 @@
             </div>
           </h1>
         </div>
-      </div>
-    </header>
-    <main>
-      <section class="about">
-        <header class="about__arrow">
+        <div class="header__arrow">
           <img
             src="./static/img/arrow-1.svg"
             alt="Flèche vers la section à propos"
           />
-        </header>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="about">
         <div class="about__title">
           <h2>À Propos</h2>
         </div>
@@ -119,12 +119,20 @@
             </h5>
           </div>
         </div>
+        <div class="about__arrow">
+          <img
+            src="./static/img/arrow-2.svg"
+            alt="Flèche vers la section de la grille"
+          />
+        </div>
       </section>
-      <main>
-        <section class="grid">
-          <div class="projets-holder"></div>
-        </section>
-      </main>
+
+      <section class="grid">
+        <div class="grid__title">
+          <h2>À Propos</h2>
+        </div>
+        <div class="projets-holder"></div>
+      </section>
       <footer class="p-50">PMI - 2024</footer>
       <div class="modale-holder hidden">
         <header>
@@ -133,7 +141,6 @@
         <div class="modale-contenu flex"></div>
       </div>
       <script src="./assets/js/projets.js" type="module"></script>
-
       <section></section>
     </main>
   </body>
