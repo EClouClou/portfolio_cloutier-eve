@@ -1,63 +1,76 @@
 [
   {
     "id": "1",
-    "name": "Projet 1",
-    "category": "imprimé",
-    "kind": "bulletin",
-    "img": "./static/img/a2-maquette.jpg",
-    "imgAlt": "bulletin-porcima",
-    "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
-    "date": "2024-10-24",
-    "type": "programmation",
+    "palette": ["#F27059", "#FBBA1D", "#4893FF", "#676665", "#FFFFFF"],
+    "name": "Maquette A2",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Incubateur A2",
+    "audience": "Jeunes entrepreurs et entrepreneures de la ville de Québec",
+    "category": "maquette",
+    "kind": "maquette multiformat",
+    "imgCard": "./static/img/a2-maquette.jpg",
+    "imgModal": "./static/img/a2-maquette.jpg",
+    "imgAlt": "maquette multiformat A2",
+    "description": "L’incubateur A2 souhaite concevoir un site Web pour le lancement de leur nouvelle entreprise. Le mandat vise à réaliser de maquettes en formats ordinateur de table et mobile pour la conception d’un site Web en trois phases. Tout d’abord, l’alignement stratégique qui est la phase de recherche et de conceptualisation. Ensuite l’alignement graphique qui propose une avenue créative liée aux besoins conceptuels et techniques du projet et, finalement, l’élaboration d’un concept sous la forme de maquettes filaires, haute résolution avec quelques éléments prototypés. Le tout, accompagné d’un guide de design d’interface. ",
+    "date": "2023-12-20",
     "liens": {
-      "github": "https://github.com/becma/ex_json"
+      "figma": "https://www.figma.com/design/yJTvgR8eVqoR2ftiUzDUua/Maquette-A2---Eve-Cloutier?node-id=0-1&t=SkVw5Oddq4Ssobmc-1"
     },
-    "stack": ["html", "sass", "javascript", "npm", "git"],
+    "stack": ["figma", "illustrator"],
     "gridArea": 1
   },
   {
     "id": "2",
-    "name": "Projet 2",
-    "category": "imprimé",
-    "kind": "bulletin",
-    "img": "./static/img/halloween-dagobert-affiche.jpg",
-    "imgAlt": "Image du projet 2",
-    "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
-    "date": "2024-10-24",
-    "type": "programmation",
+    "palette": ["#4F7302", "#F3F6EE", "#F2A20C", "#D96B0B", "#101700"],
+    "name": "Maquette Fermiers·ères de famille",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Réseau des fermiers·ères de famille",
+    "audience": "Majoritairement des adultes citadins soucieux de leur santé qui encourage l'achat local.",
+    "category": "maquette",
+    "kind": "maquette multiformat",
+    "imgCard": "./static/img/fermier-de-famille-maquette.jpg",
+    "imgModal": "./static/img/fermier-de-famille-maquette.jpg",
+    "imgAlt": "maquette multiformat Fermiers·ères de famille",
+    "description": "Le Réseau des fermiers·ères de famille désire obtenir le design d'interface de sa nouvelle application mobile. Le mandat vise à effectuer la recherche, les user flows (représentation des chemins qu’il est possible qu'emprunte un utilisateur qui navigue sur un site Internet ou une application), les maquettes filaires et les maquettes haute fidélités prototypées de quatre sections.",
+    "date": "2023-12-20",
     "liens": {
-      "behance": "https://github.com/becma/ex_json",
-      "github": "https://github.com/becma/ex_json"
+      "behance": "https://github.com/becma/ex_json"
     },
-    "stack": ["photoshop"],
+    "stack": ["figma, illustrator, photoshop"],
     "gridArea": 2
   },
   {
     "id": "3",
-    "name": "Projet 3",
+    "palette": ["#009379", "#F2BFAF", "#F8F9FF", "#FFFFFF", "#2D2D2D"],
+    "name": "Maquette Nadia Benny",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Massothérapie Nadia Benny",
+    "audience": "Majoritairement des adultes citadins soucieux de leur santé qui encourage l'achat local.",
     "category": "imprimé",
-    "kind": "bulletin",
-    "img": ".src/static/img/design_dk_magazine.jpg",
-    "imgAlt": "Image du projet 3",
+    "kind": "maquette haute résolution",
+    "imgCard": "./static/img/nadia-benny-maquette-card.jpg",
+    "imgModal": "./static/img/nadia-benny-maquette.jpg",
+    "imgAlt": "maquette Nadia Benny",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
     "date": "2024-10-24",
-    "type": "programmation",
     "liens": {
       "codepen": "https://github.com/becma/ex_json"
     },
-    "stack": ["html", "sass", "javascript", "npm", "git"],
+    "stack": ["figma", "illustrator"],
     "gridArea": 3
   },
   {
     "id": "4",
+    "palette": ["#F27059", "#FBBA1D", "#4893FF", "#676665", "#FFFFFF"],
     "name": "Projet 4",
+    "type": "Maquette, prototype, UI, UX",
     "category": "imprimé",
     "kind": "bulletin",
-    "img": "./static/img/auberge-baker-menu.jpg",
+    "imgCard": "./static/img/air-transat-maquette.jpg",
+    "imgModal": "./static/img/air-transat-maquette.jpg",
     "imgAlt": "Image du projet 4",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
     "date": "2024-10-24",
-    "type": "programmation",
     "liens": {
       "figma": "https://github.com/becma/ex_json"
     },
@@ -66,14 +79,16 @@
   },
   {
     "id": "5",
+    "palette": ["#F27059", "#FBBA1D", "#4893FF", "#676665", "#FFFFFF"],
     "name": "Projet 5",
+    "type": "Maquette, prototype, UI, UX",
     "category": "imprimé",
     "kind": "bulletin",
-    "img": "./static/img/fermier-de-famille-maquette.jpg",
+    "imgCard": "",
+    "imgModal": "",
     "imgAlt": "Image du projet 5",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
     "date": "2024-10-24",
-    "type": "programmation",
     "liens": {
       "dribbble": "https://github.com/becma/ex_json"
     },
@@ -82,14 +97,16 @@
   },
   {
     "id": "6",
+    "palette": ["#F27059", "#FBBA1D", "#4893FF", "#676665", "#FFFFFF"],
     "name": "Projet 6",
+    "type": "Maquette, prototype, UI, UX",
     "category": "imprimé",
     "kind": "bulletin",
-    "img": "./static/img/auberge-baker-menu.jpg",
+    "imgCard": "./static/img/auberge-baker-menu.jpg",
+    "imgModal": "./static/img/a2-maquette.jpg",
     "imgAlt": "Image du projet 6",
     "description": "When in doubt, wash Gate keepers of hell. Cough furball leave buried treasure in the sandbox for the toddlers but attack like a vicious monster yet cuddle no cuddle cuddle love scratch scratch destroy couch thinking about you i'm joking it's food always food hiss at vacuum cleaner.",
     "date": "2024-10-24",
-    "type": "programmation",
     "liens": {
       "youtube": "https://github.com/becma/ex_json",
       "github": "https://github.com/becma/ex_json",
@@ -98,5 +115,125 @@
     },
     "stack": ["html", "sass", "javascript", "npm", "git"],
     "gridArea": 6
+  },
+  {
+    "id": "7",
+    "palette": ["#F27059", "#FBBA1D", "#4893FF", "#676665", "#FFFFFF"],
+    "name": "Maquette A2",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Incubateur A2",
+    "audience": "Jeunes entrepreurs et entrepreneures de la ville de Québec",
+    "category": "maquette",
+    "kind": "maquette multiformat",
+    "imgCard": "./static/img/a2-maquette.jpg",
+    "imgModal": "./static/img/a2-maquette.jpg",
+    "imgAlt": "maquette multiformat A2",
+    "description": "L’incubateur A2 souhaite concevoir un site Web pour le lancement de leur nouvelle entreprise. Le mandat vise à réaliser de maquettes en formats ordinateur de table et mobile pour la conception d’un site Web en trois phases. Tout d’abord, l’alignement stratégique qui est la phase de recherche et de conceptualisation. Ensuite l’alignement graphique qui propose une avenue créative liée aux besoins conceptuels et techniques du projet et, finalement, l’élaboration d’un concept sous la forme de maquettes filaires, haute résolution avec quelques éléments prototypés. Le tout, accompagné d’un guide de design d’interface. ",
+    "date": "2023-12-20",
+    "liens": {
+      "figma": "https://www.figma.com/design/yJTvgR8eVqoR2ftiUzDUua/Maquette-A2---Eve-Cloutier?node-id=0-1&t=SkVw5Oddq4Ssobmc-1"
+    },
+    "stack": ["figma", "illustrator"],
+    "gridArea": 7
+  },
+  {
+    "id": "8",
+    "palette": ["#4F7302", "#F2A20C", "#D96B0B", "#101700"],
+    "name": "Affiche promotionnelle",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Incubateur A2",
+    "audience": "Jeunes entrepreurs et entrepreneures de la ville de Québec",
+    "category": "imprimé",
+    "kind": "affiche",
+    "imgCard": "./static/img/halloween_poster-card.jpg",
+    "imgModal": "./static/img/halloween-dagobert-affiche.jpg",
+    "imgAlt": "Image du projet 2",
+    "description": "Faire la conception et la réalisation graphique d’une publicité pour un party d’Halloween. Le montage doit être fait entièrement dans Photoshop. La partie typographie doit être recherchée, originale et lisible. Le texte est imposé. Certaines images sont fournies, mais pas toutes.",
+    "date": "2023-12-20",
+    "liens": {
+      "behance": "https://github.com/becma/ex_json"
+    },
+    "stack": ["photoshop"],
+    "gridArea": 8
+  },
+  {
+    "id": "9",
+    "palette": ["#F27059", "#FBBA1D", "#4893FF", "#676665", "#FFFFFF"],
+    "name": "Maquette A2",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Incubateur A2",
+    "audience": "Jeunes entrepreurs et entrepreneures de la ville de Québec",
+    "category": "maquette",
+    "kind": "maquette multiformat",
+    "imgCard": "./static/img/a2-maquette.jpg",
+    "imgModal": "./static/img/a2-maquette.jpg",
+    "imgAlt": "maquette multiformat A2",
+    "description": "L’incubateur A2 souhaite concevoir un site Web pour le lancement de leur nouvelle entreprise. Le mandat vise à réaliser de maquettes en formats ordinateur de table et mobile pour la conception d’un site Web en trois phases. Tout d’abord, l’alignement stratégique qui est la phase de recherche et de conceptualisation. Ensuite l’alignement graphique qui propose une avenue créative liée aux besoins conceptuels et techniques du projet et, finalement, l’élaboration d’un concept sous la forme de maquettes filaires, haute résolution avec quelques éléments prototypés. Le tout, accompagné d’un guide de design d’interface. ",
+    "date": "2023-12-20",
+    "liens": {
+      "figma": "https://www.figma.com/design/yJTvgR8eVqoR2ftiUzDUua/Maquette-A2---Eve-Cloutier?node-id=0-1&t=SkVw5Oddq4Ssobmc-1"
+    },
+    "stack": ["figma", "illustrator"],
+    "gridArea": 9
+  },
+  {
+    "id": "10",
+    "palette": ["#4F7302", "#F2A20C", "#D96B0B", "#101700"],
+    "name": "Affiche promotionnelle",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Incubateur A2",
+    "audience": "Jeunes entrepreurs et entrepreneures de la ville de Québec",
+    "category": "imprimé",
+    "kind": "affiche",
+    "imgCard": "./static/img/halloween_poster-card.jpg",
+    "imgModal": "./static/img/halloween-dagobert-affiche.jpg",
+    "imgAlt": "Image du projet 2",
+    "description": "Faire la conception et la réalisation graphique d’une publicité pour un party d’Halloween. Le montage doit être fait entièrement dans Photoshop. La partie typographie doit être recherchée, originale et lisible. Le texte est imposé. Certaines images sont fournies, mais pas toutes.",
+    "date": "2023-12-20",
+    "liens": {
+      "behance": "https://github.com/becma/ex_json"
+    },
+    "stack": ["photoshop"],
+    "gridArea": 10
+  },
+  {
+    "id": "11",
+    "palette": ["#F27059", "#FBBA1D", "#4893FF", "#676665", "#FFFFFF"],
+    "name": "Maquette A2",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Incubateur A2",
+    "audience": "Jeunes entrepreurs et entrepreneures de la ville de Québec",
+    "category": "maquette",
+    "kind": "maquette multiformat",
+    "imgCard": "./static/img/a2-maquette.jpg",
+    "imgModal": "./static/img/a2-maquette.jpg",
+    "imgAlt": "maquette multiformat A2",
+    "description": "L’incubateur A2 souhaite concevoir un site Web pour le lancement de leur nouvelle entreprise. Le mandat vise à réaliser de maquettes en formats ordinateur de table et mobile pour la conception d’un site Web en trois phases. Tout d’abord, l’alignement stratégique qui est la phase de recherche et de conceptualisation. Ensuite l’alignement graphique qui propose une avenue créative liée aux besoins conceptuels et techniques du projet et, finalement, l’élaboration d’un concept sous la forme de maquettes filaires, haute résolution avec quelques éléments prototypés. Le tout, accompagné d’un guide de design d’interface. ",
+    "date": "2023-12-20",
+    "liens": {
+      "figma": "https://www.figma.com/design/yJTvgR8eVqoR2ftiUzDUua/Maquette-A2---Eve-Cloutier?node-id=0-1&t=SkVw5Oddq4Ssobmc-1"
+    },
+    "stack": ["figma", "illustrator"],
+    "gridArea": 11
+  },
+  {
+    "id": "12",
+    "palette": ["#4F7302", "#F2A20C", "#D96B0B", "#101700"],
+    "name": "Affiche promotionnelle",
+    "type": "Maquette, prototype, UI, UX",
+    "customer": "Incubateur A2",
+    "audience": "Jeunes entrepreurs et entrepreneures de la ville de Québec",
+    "category": "imprimé",
+    "kind": "affiche",
+    "imgCard": "./static/img/halloween_poster-card.jpg",
+    "imgModal": "./static/img/halloween-dagobert-affiche.jpg",
+    "imgAlt": "Image du projet 2",
+    "description": "Faire la conception et la réalisation graphique d’une publicité pour un party d’Halloween. Le montage doit être fait entièrement dans Photoshop. La partie typographie doit être recherchée, originale et lisible. Le texte est imposé. Certaines images sont fournies, mais pas toutes.",
+    "date": "2023-12-20",
+    "liens": {
+      "behance": "https://github.com/becma/ex_json"
+    },
+    "stack": ["photoshop"],
+    "gridArea": 12
   }
 ]

@@ -42,7 +42,7 @@ $rowArray: "";
 }
 
 $areasArray: "";
-@for $i from 0 through 6 {
+@for $i from 0 through 12 {
   .tuile-#{$i} {
     grid-area: tuile#{$i};
   }

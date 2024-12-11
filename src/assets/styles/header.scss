@@ -7,8 +7,12 @@
 .navbar {
   @include mixins.flex-center;
 
+  &__item {
+    @include mixins.transition();
+  }
+
   & h2 {
-    background-color: var.$beige;
+    background-color: var.$color-beige;
   }
 
   &__brand {
@@ -21,7 +25,7 @@
   }
 
   &__img {
-    color: var.$black;
+    color: var.$color-black;
     width: 2.12rem;
   }
 
@@ -36,7 +40,8 @@
     > ul {
       display: none;
       flex-direction: row;
-      gap: 1.5rem;
+      gap: 2.625rem;
+      padding: 1.45rem;
       list-style-type: none;
       @include mixins.tablet {
         display: flex;

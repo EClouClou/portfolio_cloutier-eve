@@ -32,15 +32,38 @@ $font-size-base: 16px;
   align-items: $align;
 }
 
-// GAP
-$gapI: 0;
+// // PADDING
+// $pI: 0;
 
-@while $gapI <= 100 {
-  .g-#{$gapI} {
-    gap: toRem($gapI);
-  }
+// @while $pI <= 100 {
+//   .g-#{$pI} {
+//     gap: toRem($pI);
+//   }
 
-  $gapI: $gapI + 1;
+//   $pI: $pI + 1;
+// }
+
+// // GAP
+// $gapI: 0;
+
+// @while $gapI <= 100 {
+//   .g-#{$gapI} {
+//     gap: toRem($gapI);
+//   }
+
+//   $gapI: $gapI + 1;
+// }
+
+@mixin rounded($radius: 30) {
+  border-radius: $radius;
+}
+
+@mixin border-t($border: 0.25px solid var.$color-black) {
+  border-top: $border;
+}
+
+@mixin border-b($border: 0.25px solid var.$color-black) {
+  border-bottom: $border;
 }
 
 @mixin card-shadow {
@@ -50,16 +73,34 @@ $gapI: 0;
   border-radius: 30px;
 }
 
+@mixin card-hover-shadow {
+  box-shadow: rgba(var.$color-beige, 0.3) 0px 1px 1px,
+    rgba(var.$color-beige, 0.7) 0px 2px 2px,
+    rgba(var.$color-beige, 0.7) 0px 4px 4px,
+    rgba(var.$color-beige, 0.7) 0px 8px 8px,
+    rgba(var.$color-beige, 0.7) 0px 16px 16px,
+    rgba(var.$color-black, 0.1) 0px 20px 20px;
+  border-radius: 30px;
+}
+
 // À revoir : ne fonctionne pas bien
 @mixin text-shadow {
-  box-shadow: rgba(0, 0, 0, 0.35) 3px -30px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 3px -30px 36px -28px inset;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  background-image: linear-gradient(
-    to top,
-    var.$color-offWhite,
-    transparentize(var.$color-offWhite, 1)
-  );
+}
+
+@mixin palette-shadow($height: 40px, $width: 40px) {
+  height: $height;
+  width: $width;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 10px;
+}
+
+@mixin transition($duration: 0.5s, $easing: ease) {
+  transition: all 0.5s ease;
 }
 
 // RESPONSIVE

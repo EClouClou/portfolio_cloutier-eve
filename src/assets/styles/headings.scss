@@ -15,27 +15,37 @@
 h1 {
   color: var.$color-black;
   font-family: "GaramondItalic";
-  font-size: 4.6865rem;
+  font-size: 4.6875rem;
   font-weight: 700;
   @include mixins.tablet {
     font-size: 8rem;
-    transition: 0.5s ease;
+    @include mixins.transition;
   }
 }
 
 h2 {
   color: var.$color-black;
   font-family: "Raleway";
-  font-size: 3.125rem;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: -0.5%;
+  @include mixins.tablet {
+    font-size: 2.85rem;
+  }
+  @include mixins.desktop {
+    font-size: 3.125rem;
+  }
 }
 
 h3 {
   color: var.$color-black;
   font-family: "Raleway";
-  font-size: 2.5rem;
+  font-size: 2.125rem;
   font-weight: 400;
+  @include mixins.tablet {
+    font-size: 2.5rem;
+    @include mixins.transition;
+  }
 }
 
 h4 {
@@ -45,32 +55,60 @@ h4 {
   font-weight: 400;
   letter-spacing: 0.25%;
   @include mixins.tablet {
+    font-size: 1.875rem;
+    @include mixins.transition;
+  }
+  @include mixins.desktop {
     font-size: 2.1875rem;
-    transition: 0.5s ease;
+    @include mixins.transition;
   }
 }
 
 h5 {
   color: var.$color-black;
   font-family: "Raleway";
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   font-weight: 300;
+  @include mixins.tablet {
+    font-size: 1.5625rem;
+  }
 }
 
 h6 {
   color: var.$color-black;
   font-family: "Raleway";
-  font-size: 1.3125rem;
+  font-size: 1.125rem;
   font-weight: 400;
   letter-spacing: 0.15%;
+  @include mixins.tablet {
+    font-size: 1.125rem;
+  }
 }
 
-p {
+p,
+ul {
   color: var.$color-black;
   font-family: "Raleway";
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.5%;
+}
+
+a {
+  color: var.$color-black;
+  font-family: "Raleway";
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 1.25%;
+  text-decoration: none;
+}
+
+i {
+  font-size: 1.8rem;
+}
+
+.bold {
+  font-weight: 900;
 }
 
 .subtitle1 {
@@ -101,6 +139,10 @@ p {
   position: absolute;
 }
 
+.top-0 {
+  top: 0;
+}
+
 .bottom-0 {
   bottom: 0;
 }
@@ -113,21 +155,30 @@ p {
   flex-direction: column;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .justify-between {
   display: flex;
   justify-content: space-between;
 }
 
-.end {
-  justify-content: flex-end;
+.overflow-h {
+  overflow: hidden;
 }
 
 .align-center {
   align-items: center;
 }
 
-.rounded {
-  border-radius: 30px;
+.align-left {
+  align-items: left;
 }
 
 .gap-1 {
@@ -138,8 +189,34 @@ p {
   padding: 1rem;
 }
 
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pr-4 {
+  padding-right: 4rem;
+}
+
+// À retirer à la fin
 .bg-test {
   background-color: magenta;
+}
+
+// À retirer à la fin
+.bg-test-blue {
+  background-color: blue;
 }
 
 .card-shadow {
@@ -150,9 +227,30 @@ p {
   @include mixins.text-shadow;
 }
 
-.w-90 {
-  display: flex;
-  justify-content: stretch;
-  width: 92.2%;
-  max-width: 100%;
+.box {
+  box-sizing: border-box;
+}
+
+.full-h {
+  height: 100%;
+}
+
+.full-w {
+  width: 100%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
 }

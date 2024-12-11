@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 //COLORS
-$vert: #4f7302;
 $offWhite: #f8f9ff;
 $beige: #d7c6a7;
+$grey: #d0d0d0;
 $black: #1e1e1e;
 
-$color-primary: $vert;
 $color-offWhite: $offWhite;
+$color-beige: $beige;
+$color-grey: $grey;
 $color-black: $black;
 
 //FONTS
@@ -23,18 +26,18 @@ $color-black: $black;
     url(../fonts/ebgaramond-variablefont_wght-webfont.woff) format("woff");
 }
 
-@font-face {
-  font-family: "RalewayItalic";
-  src: url(../fonts/raleway-italic-variablefont_wght-webfont.woff2)
-      format("woff2"),
-    url(../fonts/raleway-italic-variablefont_wght-webfont.woff) format("woff");
-}
+// @font-face {
+//   font-family: "RalewayItalic";
+//   src: url(../fonts/raleway-italic-variablefont_wght-webfont.woff2)
+//       format("woff2"),
+//     url(../fonts/raleway-italic-variablefont_wght-webfont.woff) format("woff");
+// }
 
-@font-face {
-  font-family: "Raleway";
-  src: url(../fonts/raleway-variablefont_wght-webfont.woff2) format("woff2"),
-    url(../fonts/raleway-variablefont_wght-webfont.woff) format("woff");
-}
+// @font-face {
+//   font-family: "Raleway";
+//   src: url(../fonts/raleway-variablefont_wght-webfont.woff2) format("woff2"),
+//     url(../fonts/raleway-variablefont_wght-webfont.woff) format("woff");
+// }
 
 // BREAKPOINTS
 $small: 640px;

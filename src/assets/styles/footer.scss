@@ -1,3 +1,76 @@
 //PARTIALS
 @use "partials/mixins" as mixins;
 @use "partials/variables" as var;
+
+.footer {
+  &__title {
+    padding-top: 5.625rem;
+    // @include mixins.flex-center(column, space-between, flex-start);
+    @include mixins.border-b();
+
+    @include mixins.tablet {
+      padding-top: 5.1875rem;
+    }
+    @include mixins.desktop {
+    }
+
+    & h2 {
+      background-color: var.$color-beige;
+      display: inline-block;
+      padding: 0.625rem;
+      border-radius: 10px;
+      transform: translateY(23px);
+      position: relative;
+      z-index: 1;
+      @include mixins.tablet {
+        transform: translateY(46px);
+      }
+    }
+  }
+
+  &__info {
+    @include mixins.flex-center();
+    padding-top: 7.7875rem;
+  }
+
+  &__brand {
+    @include mixins.flex-center(column, space-between, flex-start);
+    gap: 2.1875rem;
+  }
+
+  &__img {
+    color: var.$color-black;
+    width: 6.875rem;
+  }
+
+  &__particulars {
+    @include mixins.flex-center(column, space-between, flex-start);
+    gap: 2.5rem;
+
+    & a {
+      @include mixins.flex-center();
+      gap: 1.25rem;
+    }
+  }
+
+  &__connections {
+    @include mixins.flex-center(column, space-between, flex-end);
+    gap: 6.875rem;
+  }
+
+  &__sites {
+    @include mixins.flex-center();
+    gap: 3.125rem;
+  }
+
+  &__list {
+    > ul {
+      display: none;
+      gap: 2.5rem;
+      list-style-type: none;
+      @include mixins.tablet {
+        display: flex;
+      }
+    }
+  }
+}

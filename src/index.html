@@ -24,28 +24,21 @@
         <div class="navbar__list">
           <ul>
             <li class="navbar__item">
-              <button>
-                <a class="navbar__link" href="#" alt="À propos"></a>À Propos
-              </button>
+              <a class="navbar__link" href="#about" alt="À propos">À Propos</a>
             </li>
             <li>
-              <button>
-                <a class="navbar__link" href="#" alt="Réalisations"></a
-                >Réalisations
-              </button>
+              <a class="navbar__link" href="#achievement" alt="Réalisations"
+                >Réalisations</a
+              >
             </li>
             <li>
-              <button><a class="navbar__link" href="#" alt="CV"></a>CV</button>
+              <a class="navbar__link" href="#" alt="CV">CV</a>
             </li>
             <li>
-              <button>
-                <a class="navbar__link" href="#" alt="Sources"></a>Sources
-              </button>
+              <a class="navbar__link" href="#" alt="Sources">Sources</a>
             </li>
             <li>
-              <button>
-                <a class="header-nav__link" href="#" alt="Contact"></a>Contact
-              </button>
+              <a class="navbar__link" href="#contact" alt="Contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -79,7 +72,7 @@
       </div>
     </header>
     <main>
-      <section class="about">
+      <section id="about" class="about">
         <div class="about__title">
           <h2>À Propos</h2>
         </div>
@@ -119,29 +112,135 @@
             </h5>
           </div>
         </div>
-        <div class="about__arrow">
-          <img
-            src="./static/img/arrow-2.svg"
-            alt="Flèche vers la section de la grille"
-          />
+        <div>
+          <div class="transition">
+            <img
+              class="transition__arrow"
+              src="./static/img/arrow-2.svg"
+              alt="Flèche vers la section de la
+          grille"
+            />
+          </div>
         </div>
       </section>
 
       <section class="grid">
-        <div class="grid__title">
-          <h2>À Propos</h2>
+        <div class="grid__infos">
+          <h2 class="grid__title" id="achievement">Réalisations</h2>
+          <button class="grid__cta">
+            <h4 class="grid__filter">Filtre</h4>
+            <i class="fa-solid fa-filter"></i>
+          </button>
         </div>
         <div class="projets-holder"></div>
       </section>
-      <footer class="p-50">PMI - 2024</footer>
       <div class="modale-holder hidden">
-        <header>
-          <button data-modal-close>FERMER</button>
-        </header>
-        <div class="modale-contenu flex"></div>
+        <div class="modale">
+          <header>
+            <button data-modal-close>
+              <i class="fa-regular fa-rectangle-xmark"></i>
+            </button>
+          </header>
+          <div class="modale-contenu flex"></div>
+        </div>
       </div>
-      <script src="./assets/js/projets.js" type="module"></script>
-      <section></section>
+      <div class="final">
+        <img
+          class="final__arrow"
+          src="./static/img/arrow-3.svg"
+          alt="Flèche vers la section finale"
+        />
+      </div>
     </main>
+    <footer class="footer">
+      <section id="contact">
+        <div class="footer__title">
+          <h2>Contact</h2>
+        </div>
+        <div class="footer__info">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <img
+                class="footer__img"
+                src="./static/img/logo-eve-noir.svg"
+                alt="Logo Eve Cloutier"
+              />
+            </div>
+            <h5 class="footer__name">Eve Cloutier</h5>
+          </div>
+
+          <div class="footer__particulars">
+            <a
+              href="mailto:ecloutier40@outlook.com"
+              target="_blank"
+              class="footer__email"
+              ><i class="fa-solid fa-envelope"></i>
+              <h5>ecloutier40@outlook.com</h5></a
+            >
+            <a href="tel:+1234567890" target="_blank" class="footer__phone"
+              ><i class="fa-solid fa-phone"></i>
+              <h5>418 264-9826</h5></a
+            >
+            <a
+              href="https://www.linkedin.com/in/eve-cloutier-656b7b227/"
+              target="_blank"
+              class="footer__linkedin"
+              ><i class="fa-brands fa-linkedin"></i>
+              <h5>eve-cloutier-656b7b227</h5></a
+            >
+          </div>
+          <div class="footer__connections">
+            <div class="footer__sites">
+              <a href="https://github.com/EClouClou"
+                ><i
+                  class="fa-brands fa-square-github"
+                  target="_blank"
+                  aria-label="GitHub"
+                ></i
+              ></a>
+              <a
+                href="https://www.figma.com/@evecloutier"
+                target="_blank"
+                aria-label="Figma"
+                ><i class="fa-brands fa-figma"></i
+              ></a>
+              <a
+                href="https://www.behance.net/"
+                target="_blank"
+                aria-label="Behance"
+                ><i class="fa-brands fa-square-behance"></i
+              ></a>
+            </div>
+            <div class="footer__list">
+              <ul>
+                <li class="footer__item">
+                  <a class="footer__link" href="#about" alt="À propos"
+                    >À Propos</a
+                  >
+                </li>
+                <li>
+                  <a class="footer__link" href="#achievement" alt="Réalisations"
+                    >Réalisations</a
+                  >
+                </li>
+                <li>
+                  <a class="footer__link" href="#" alt="CV">CV</a>
+                </li>
+                <li>
+                  <a class="navbar__link" href="#" alt="Sources">Sources</a>
+                </li>
+                <li>
+                  <a class="navbar__link" href="#contact" alt="Contact"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="./assets/js/projets.js" type="module"></script>
   </body>
 </html>

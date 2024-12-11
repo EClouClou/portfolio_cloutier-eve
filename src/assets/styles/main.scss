@@ -11,24 +11,31 @@
   @include mixins.flex-center(column, space-between, flex-start);
   @include mixins.tablet {
     padding-top: 5.1875rem;
-    transform: translateY(-1.5rem);
-    transition: 0.5s ease;
+  }
+  @include mixins.desktop {
   }
 
   & h2 {
-    background-color: var.$beige;
+    background-color: var.$color-beige;
     display: inline-flex;
     padding: 0.625rem;
     border-radius: 10px;
-    transform: translateY(46px);
+    transform: translateY(23px);
+    @include mixins.tablet {
+      transform: translateY(46px);
+    }
   }
 
   &__introduction {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border-top: 0.5px solid var.$black;
-    padding: 6.25rem 0;
+    @include mixins.flex-center(column);
+    @include mixins.border-t();
+    padding: 2.75rem 0;
     gap: 1.5rem;
+    @include mixins.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 6.25rem 0;
+    }
   }
 
   &__description {
@@ -39,55 +46,132 @@
   &__photo img {
     max-width: 100%;
     width: 100%;
-    height: 26.25rem;
+    height: 20rem;
     object-fit: cover;
     object-position: top center;
     border-radius: 10px;
+    @include mixins.tablet {
+      height: 26.25rem;
+    }
   }
 
   &__profile,
   &__skills {
+    @include mixins.flex-center(column, space-between, flex-start);
+    @include mixins.border-t();
+    padding: 2.75rem 0;
+    gap: 1rem;
+    @include mixins.tablet {
+      padding: 6.25rem 0;
+    }
+    @include mixins.desktop {
+      display: grid;
+      grid-template-columns: 25% 54% 21%;
+      align-items: start;
+    }
+  }
+}
+
+.transition {
+  @include mixins.flex-center(column);
+  width: 100%;
+  @include mixins.tablet {
     display: grid;
     grid-template-columns: 25% 54% 21%;
-    padding: 6.25rem 0;
-    border-top: 0.5px solid var.$black;
+    @include mixins.tablet {
+      width: 772px;
+    }
+    @include mixins.desktop {
+      width: 1140px;
+    }
+  }
+
+  &__arrow {
+    transform: rotate(52.8deg);
+    @include mixins.tablet {
+      grid-column-start: 2;
+      padding-left: 5rem;
+    }
   }
 }
 
-.main__arrow {
-  display: grid;
-  grid-template-columns: 25% 54% 21%;
-  padding: 6.25rem 0;
+.grid {
+  @include mixins.flex-center(column);
 
-  & > img {
-    grid-column-start: 2;
+  &__infos {
+    @include mixins.flex-center;
+    width: 100%;
+  }
+
+  & h2 {
+    background-color: var.$color-beige;
+    display: inline-flex;
+    padding: 0.625rem;
+    border-radius: 10px;
+    transform: translateY(23px);
+    @include mixins.tablet {
+      transform: translateY(46px);
+    }
+  }
+
+  &__cta {
+    @include mixins.flex-center;
+    gap: 1.375rem;
+    transform: translateY(0.5rem);
+    @include mixins.tablet {
+      transform: translateY(1rem);
+    }
+
+    & i {
+      font-size: 1.4rem;
+      @include mixins.tablet {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
+// Mosaïque
 .projets-holder {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-
-  @include mixins.desktop {
+  padding-top: 2.75rem;
+  // max-width: 1140px;
+  box-sizing: border-box;
+  @include mixins.border-t();
+  @include mixins.tablet {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     grid-auto-rows: 1fr;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 2;
+    padding-top: 8.75rem;
     grid-template-areas:
       "tuile1 tuile2 tuile3"
       "tuile1 tuile2 tuile3"
       "tuile4 tuile2 tuile5"
       "tuile4 tuile6 tuile5"
-      "tuile4 tuile6 tuile5";
+      "tuile4 tuile6 tuile5"
+      "tuile7 tuile8 tuile9"
+      "tuile7 tuile8 tuile9"
+      "tuile10 tuile8 tuile11"
+      "tuile10 tuile12 tuile11"
+      "tuile10 tuile12 tuile11";
   }
 
   & > button {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+
+    &:hover {
+      // border: 0.5px solid var.$color-black;
+      // background-color: var.$color-offWhite;
+      // opacity: 0.7;
+      @include mixins.card-hover-shadow;
+    }
   }
 
   img {
@@ -95,45 +179,115 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    @include mixins.rounded;
   }
 }
 
+.hidden {
+  display: none;
+}
+
+// Overlay
 .modale-holder {
-  background-color: white;
+  background-color: var.$color-offWhite;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  padding: 50px;
-  box-sizing: border-box;
+  z-index: 100;
 
   header {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    @include mixins.flex-center;
+    // padding-top: 20rem;
+    padding-bottom: 0.75rem;
 
     button {
-      background-color: black;
+      position: relative;
+      z-index: 10;
       border: none;
-      color: white;
+      color: var.$color-offWhite;
       cursor: pointer;
-      padding: 10px;
       display: block;
       transition: all 0.3s ease-in-out;
+      border-radius: 10px;
+      order: 3;
+      @include mixins.tablet {
+        transform: translateX(10px);
+      }
+
+      & i {
+        color: var.$color-black;
+        font-size: 2.7rem;
+        padding: 0.75rem;
+      }
 
       &:hover,
       &:focus {
-        background-color: hotpink;
-        color: black;
+        background-color: var.$color-beige;
+        color: var.$color-black;
       }
     }
   }
 
+  .card-holder {
+    @include mixins.flex-center(column);
+    @include mixins.card-shadow;
+    overflow: hidden;
+    position: relative;
+  }
+
+  //Modale
+  .modale {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10%);
+    z-index: 200;
+    @include mixins.tablet {
+      transform: translate(-50%, -50%);
+    }
+    @include mixins.desktop {
+      max-width: 1440px;
+    }
+  }
+
+  .infos-holder {
+    @include mixins.flex-center(column, space-between, stretch);
+    gap: 1rem;
+    transform: translateY(0px);
+    @include mixins.tablet {
+      transform: translateY(-80px);
+    }
+  }
+
   .modale-contenu {
-    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    @include mixins.tablet {
+      gap: 30px;
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+    }
+    @include mixins.desktop {
+      gap: 50px;
+    }
 
     img {
-      width: 40%;
+      height: 400px;
+      // width: calc(100% - 1%);
+      margin-bottom: 40px;
+      object-fit: cover;
+      @include mixins.tablet {
+        width: 40%;
+        height: 450px;
+      }
+      @include mixins.desktop {
+        height: 600px;
+      }
     }
 
     ul {
@@ -143,12 +297,6 @@
       li {
         &:before {
           content: "\00a0";
-        }
-
-        &:not(:last-child) {
-          &:after {
-            content: " /";
-          }
         }
 
         a {
@@ -189,6 +337,7 @@
           > i {
             margin-left: 10px;
             font-size: 1.5rem;
+            color: var.$color-black;
           }
         }
       }
@@ -196,6 +345,70 @@
   }
 }
 
-.hidden {
-  display: none;
+.palette-item {
+  @include mixins.flex-center;
+  gap: 1rem;
+}
+
+// Modale
+.palette {
+  @include mixins.palette-shadow;
+}
+
+.typestack-holder {
+  @include mixins.flex-center;
+  @include mixins.border-t();
+  padding-top: 1rem;
+}
+
+.audience,
+.customer,
+.description {
+  @include mixins.border-t();
+  padding-top: 1rem;
+}
+
+.liensHolder {
+  @include mixins.flex-center(row, flex-start, baseline);
+  @include mixins.border-b;
+  padding-bottom: 1rem;
+}
+
+.kind {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.stack {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  @include mixins.text-shadow;
+  box-sizing: border-box;
+}
+
+.final {
+  @include mixins.flex-center(column);
+  width: 100%;
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 25% 54% 21%;
+    @include mixins.tablet {
+      width: 772px;
+    }
+    @include mixins.desktop {
+      width: 1140px;
+    }
+  }
+
+  &__arrow {
+    @include mixins.tablet {
+      grid-column-start: 2;
+      padding: 6.25rem 0 0 5rem;
+    }
+  }
 }
