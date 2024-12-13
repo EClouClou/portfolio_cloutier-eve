@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/d0b4d9ccc9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/dialog.js" defer type="module"></script>
     <title>porfolio | Eve Cloutier</title>
   </head>
   <body>
@@ -43,12 +44,51 @@
           </ul>
         </div>
         <div class="navbar__menu">
-          <button>
-            <a href="#" alt="Menu mobile">
-              <i class="fa-solid fa-bars"></i>
-            </a>
+          <!-- Bouton fermer -->
+          <button
+            data-dialog="#menu-mobile"
+            type="button"
+            class="menu=burger__container"
+            role="img"
+            aria-label="Bouton de fermeture du menu burger"
+          >
+            <i class="fa-solid fa-bars" alt="menu-burger"></i>
           </button>
         </div>
+      </div>
+      <!-- Overlay -->
+      <div
+        id="menu-mobile"
+        class="dialog header__menu-dialog"
+        aria-role="dialog"
+      >
+        <section class="overlay--close">
+          <div class="menu-title">
+            <h2>Menu</h2>
+            <button data-dialog="#menu-mobile" class="burger-nav__btn--close">
+              <i class="fa-regular fa-rectangle-xmark"></i>
+            </button>
+          </div>
+          <nav class="burger-nav">
+            <ul>
+              <li>
+                <a href="#about" alt="À propos">À Propos</a>
+              </li>
+              <li>
+                <a href="#achievement" alt="Réalisations">Réalisations</a>
+              </li>
+              <li>
+                <a href="#" alt="CV">CV</a>
+              </li>
+              <li>
+                <a href="#" alt="Sources">Sources</a>
+              </li>
+              <li>
+                <a href="#contact" alt="Contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </div>
       <div class="hero__wrapper">
         <div class="hero">
@@ -112,17 +152,16 @@
             </h5>
           </div>
         </div>
-        <div>
-          <div class="transition">
-            <img
-              class="transition__arrow"
-              src="./static/img/arrow-2.svg"
-              alt="Flèche vers la section de la
-          grille"
-            />
-          </div>
-        </div>
       </section>
+
+      <div class="transition">
+        <img
+          class="transition__arrow"
+          src="./static/img/arrow-2.svg"
+          alt="Flèche vers la section de la
+        grille"
+        />
+      </div>
 
       <section class="grid">
         <div class="grid__infos">

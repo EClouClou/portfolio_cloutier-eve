@@ -47,7 +47,6 @@ const generateModalContent = (projet) => {
   // Titre
   const title = document.createElement("h2");
   title.innerText = projet.name;
-  title.classList.add("pr-4");
   infosHolder.prepend(title);
 
   // Type et stack

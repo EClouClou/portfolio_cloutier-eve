@@ -1,0 +1,73 @@
+//PARTIALS
+@use "partials/mixins" as mixins;
+@use "partials/variables" as var;
+
+.menu-burger__container {
+  display: flex;
+}
+
+.overlay--close {
+  background-color: var.$color-p-gray;
+  height: 100vh;
+  max-width: min(30rem, calc(100% - 3rem));
+  position: relative;
+  z-index: 100;
+}
+
+.dialog[open] .burger-nav {
+  animation: slideInLeft 0.3s forwards;
+}
+
+.dialog[closing] .burger-nav {
+  animation: slideOutLeft 0.3s forwards;
+}
+
+.menu-title {
+  background-color: var.$color-beige;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.3rem;
+}
+
+.menu-burger__container {
+  padding: 0.2rem;
+}
+
+.burger-nav {
+  display: flex;
+  align-items: start;
+  justify-content: stretch;
+  padding-top: 1rem;
+}
+
+.burger-nav h2 {
+  background-color: var(--aqua-color);
+  align-self: center;
+}
+
+.burger-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  list-style: none;
+}
+
+.burger-nav a {
+  text-decoration: none;
+  color: var(--blackgrey-color);
+}
+
+.burger-nav a:active {
+  color: var(--orange-color);
+}
+
+.burger-nav__btn--close {
+  cursor: pointer;
+}
+
+.burger-nav__btn--close h3 {
+  cursor: pointer;
+  color: var(--blackgrey-color);
+}

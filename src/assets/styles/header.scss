@@ -51,8 +51,6 @@
 }
 
 .hero__wrapper {
-  // display: flex;
-  // justify-content: center;
   @include mixins.flex-center(column);
 }
 
@@ -66,15 +64,18 @@
 
   &__title {
     position: relative;
+    z-index: 10;
   }
 
   &__name {
     position: absolute;
+    z-index: 10;
   }
 
   & &__logo {
     @include mixins.flex-center(flex-end);
     position: absolute;
+    z-index: 10;
     transform: translateY(-1rem);
     right: 0;
     width: 68px;
