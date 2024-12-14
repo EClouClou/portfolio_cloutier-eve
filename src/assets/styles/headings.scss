@@ -5,12 +5,14 @@
 //MODULES
 @use "body";
 @use "header";
-@use "main.scss";
+@use "main";
 @use "footer";
 @use "grid";
 @use "dialog";
 @use "burger";
 @use "animations";
+@use "base";
+@use "_scrollbar";
 
 //COMPONENTS
 @use "buttons";
@@ -80,10 +82,10 @@ h5 {
 h6 {
   color: var.$color-black;
   font-family: "Raleway";
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.15%;
-  @include mixins.tablet {
+  @include mixins.desktop {
     font-size: 1.125rem;
   }
 }
@@ -117,9 +119,12 @@ i {
 .subtitle1 {
   color: var.$color-black;
   font-family: "GaramondItalic";
-  font-size: 1.3125rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.15%;
+  @include mixins.desktop {
+    font-size: 1.3125rem;
+  }
 }
 
 .subtitle2 {

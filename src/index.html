@@ -9,6 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/dialog.js" defer type="module"></script>
+    <script src="./assets/js/locomotive.js" defer type="module"></script>
     <title>porfolio | Eve Cloutier</title>
   </head>
   <body>
@@ -33,10 +34,13 @@
               >
             </li>
             <li>
-              <a class="navbar__link" href="#" alt="CV">CV</a>
-            </li>
-            <li>
-              <a class="navbar__link" href="#" alt="Sources">Sources</a>
+              <a
+                class="navbar__link"
+                href="./static/img/CV_EC 2024.pdf"
+                target="_blank"
+                alt="CV"
+                >CV</a
+              >
             </li>
             <li>
               <a class="navbar__link" href="#contact" alt="Contact">Contact</a>
@@ -48,8 +52,8 @@
           <button
             data-dialog="#menu-mobile"
             type="button"
-            class="menu=burger__container"
-            role="img"
+            class="menu-burger__container"
+            role="dialog"
             aria-label="Bouton de fermeture du menu burger"
           >
             <i class="fa-solid fa-bars" alt="menu-burger"></i>
@@ -69,29 +73,41 @@
               <i class="fa-regular fa-rectangle-xmark"></i>
             </button>
           </div>
-          <nav class="burger-nav">
+          <div class="burger-nav">
             <ul>
-              <li>
-                <a href="#about" alt="À propos">À Propos</a>
+              <li class="burger-nav__item">
+                <a class="burger-nav__link" href="#about" alt="À propos"
+                  >À Propos</a
+                >
               </li>
               <li>
-                <a href="#achievement" alt="Réalisations">Réalisations</a>
+                <a
+                  class="burger-nav__link"
+                  href="#achievement"
+                  alt="Réalisations"
+                  >Réalisations</a
+                >
               </li>
               <li>
-                <a href="#" alt="CV">CV</a>
+                <a
+                  class="burger-nav__link"
+                  href="./static/img/CV_EC 2024.pdf"
+                  target="_blank"
+                  alt="CV"
+                  >CV</a
+                >
               </li>
               <li>
-                <a href="#" alt="Sources">Sources</a>
-              </li>
-              <li>
-                <a href="#contact" alt="Contact">Contact</a>
+                <a class="burger-nav__link" href="#contact" alt="Contact"
+                  >Contact</a
+                >
               </li>
             </ul>
-          </nav>
+          </div>
         </section>
       </div>
-      <div class="hero__wrapper">
-        <div class="hero">
+      <div data-scroll-container class="hero__wrapper">
+        <section data-scroll-section class="hero">
           <h4 class="hero__name">Eve Cloutier</h4>
           <h1 class="hero__title">
             portfolio
@@ -102,13 +118,16 @@
               />
             </div>
           </h1>
-        </div>
-        <div class="header__arrow">
+        </section>
+        <section data-scroll-container class="header__arrow">
           <img
+            class="header__arrow-move"
+            data-scroll
+            data-scroll-class="scroll-class"
             src="./static/img/arrow-1.svg"
             alt="Flèche vers la section à propos"
           />
-        </div>
+        </section>
       </div>
     </header>
     <main>
@@ -154,14 +173,16 @@
         </div>
       </section>
 
-      <div class="transition">
+      <section data-scroll-container class="transition">
         <img
+          data-scroll
+          data-scroll-class="scroll-class"
           class="transition__arrow"
           src="./static/img/arrow-2.svg"
           alt="Flèche vers la section de la
         grille"
         />
-      </div>
+      </section>
 
       <section class="grid">
         <div class="grid__infos">
@@ -183,13 +204,15 @@
           <div class="modale-contenu flex"></div>
         </div>
       </div>
-      <div class="final">
+      <section data-scroll-container class="final">
         <img
+          data-scroll
+          data-scroll-class="scroll-class"
           class="final__arrow"
           src="./static/img/arrow-3.svg"
           alt="Flèche vers la section finale"
         />
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <section id="contact">
@@ -250,7 +273,7 @@
                 ><i class="fa-brands fa-square-behance"></i
               ></a>
             </div>
-            <div class="footer__list">
+            <div class="footer__nav">
               <ul>
                 <li class="footer__item">
                   <a class="footer__link" href="#about" alt="À propos"
@@ -263,10 +286,13 @@
                   >
                 </li>
                 <li>
-                  <a class="footer__link" href="#" alt="CV">CV</a>
-                </li>
-                <li>
-                  <a class="navbar__link" href="#" alt="Sources">Sources</a>
+                  <a
+                    class="footer__link"
+                    href="./static/img/CV_EC 2024.pdf"
+                    target="_blank"
+                    alt="CV"
+                    >CV</a
+                  >
                 </li>
                 <li>
                   <a class="navbar__link" href="#contact" alt="Contact"

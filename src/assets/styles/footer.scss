@@ -65,7 +65,7 @@
   &__connections {
     @include mixins.tablet {
       @include mixins.flex-center(column, space-between, flex-end);
-      gap: 1rem;
+      gap: 1.2rem;
       text-align: right;
     }
     @include mixins.desktop {
@@ -85,7 +85,7 @@
     }
   }
 
-  &__list {
+  &__nav {
     @include mixins.flex-center(column);
     order: 2;
     @include mixins.tablet {
@@ -94,6 +94,26 @@
     @include mixins.desktop {
       order: 2;
     }
+
+    & a {
+      color: var.$color-black;
+      padding: 1rem;
+
+      &:link {
+        color: var.$color-black;
+      }
+
+      &:hover,
+      &:active {
+        background-color: var.$color-beige;
+        border-radius: 10px;
+      }
+
+      &:visited {
+        color: var.$color-black;
+      }
+    }
+
     > ul {
       display: none;
       list-style-type: none;

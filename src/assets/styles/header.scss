@@ -11,6 +11,25 @@
     @include mixins.transition();
   }
 
+  & a {
+    color: var.$color-black;
+    padding: 1rem;
+
+    &:link {
+      color: var.$color-black;
+    }
+
+    &:hover,
+    &:active {
+      background-color: var.$color-beige;
+      border-radius: 10px;
+    }
+
+    &:visited {
+      color: var.$color-black;
+    }
+  }
+
   & h2 {
     background-color: var.$color-beige;
   }
@@ -52,6 +71,7 @@
 
 .hero__wrapper {
   @include mixins.flex-center(column);
+  position: relative;
 }
 
 .hero {
@@ -72,7 +92,7 @@
     z-index: 10;
   }
 
-  & &__logo {
+  &__logo {
     @include mixins.flex-center(flex-end);
     position: absolute;
     z-index: 10;
@@ -89,4 +109,9 @@
 
 .header__arrow {
   padding-top: 5.5rem;
+
+  &-move {
+    opacity: 0;
+    transition: opacity 3s;
+  }
 }

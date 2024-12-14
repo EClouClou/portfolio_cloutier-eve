@@ -4,13 +4,15 @@
 
 .menu-burger__container {
   display: flex;
+  padding: 0.2rem;
 }
 
 .overlay--close {
   background-color: var.$color-p-gray;
   height: 100vh;
+  width: 100vw;
   max-width: min(30rem, calc(100% - 3rem));
-  position: relative;
+  position: absolute;
   z-index: 100;
 }
 
@@ -28,46 +30,40 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2.3rem;
-}
-
-.menu-burger__container {
-  padding: 0.2rem;
+  padding: 2rem 2rem;
 }
 
 .burger-nav {
   display: flex;
   align-items: start;
   justify-content: stretch;
-  padding-top: 1rem;
-}
+  padding: 3rem 2rem;
 
-.burger-nav h2 {
-  background-color: var(--aqua-color);
-  align-self: center;
-}
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    list-style: none;
+  }
 
-.burger-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1.3rem;
-  list-style: none;
-}
+  & a {
+    text-decoration: none;
+    color: var.$color-black;
 
-.burger-nav a {
-  text-decoration: none;
-  color: var(--blackgrey-color);
-}
-
-.burger-nav a:active {
-  color: var(--orange-color);
+    &:active {
+      background-color: var.$color-beige;
+      transition: all 0.3s ease-in-out;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+  }
 }
 
 .burger-nav__btn--close {
   cursor: pointer;
-}
 
-.burger-nav__btn--close h3 {
-  cursor: pointer;
-  color: var(--blackgrey-color);
+  & h3 {
+    cursor: pointer;
+    color: var(--blackgrey-color);
+  }
 }

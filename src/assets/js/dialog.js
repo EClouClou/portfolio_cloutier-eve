@@ -3,10 +3,8 @@ const dialogs = document.querySelectorAll(".dialog");
 
 function closingDialog(e) {
   const dialog = e.target;
-
-  dialog.removeAttribute("closing", "");
-  dialog.removeAttribute("open", "");
-
+  dialog.removeAttribute("closing");
+  dialog.removeAttribute("open");
   dialog.removeEventListener("animationend", closingDialog);
 }
 
@@ -21,7 +19,7 @@ btnsDialogTrigger.forEach((btn) => {
     const dialog = document.querySelector(dialogSelector);
 
     if (dialog) {
-      if (dialog.checkVisibility()) {
+      if (dialog.hasAttribute("open")) {
         closeDialog(dialog);
       } else {
         dialog.setAttribute("open", "");
@@ -35,11 +33,27 @@ dialogs.forEach((dialog) => {
     closeDialog(dialog);
   });
 
-  const childrens = dialog.querySelectorAll("& > *");
-
-  childrens.forEach((children) => {
-    children.addEventListener("click", (e) => {
+  const childrens = dialog.children; // Correction du sélecteur
+  Array.from(childrens).forEach((child) => {
+    child.addEventListener("click", (e) => {
       e.stopImmediatePropagation();
+    });
+  });
+
+  const links = dialog.querySelectorAll("a[href^='#']");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeDialog(dialog);
+
+      setTimeout(() => {
+        const targetId = link.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // Ajustez si nécessaire
     });
   });
 });
