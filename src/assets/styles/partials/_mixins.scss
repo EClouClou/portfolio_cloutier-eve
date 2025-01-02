@@ -32,28 +32,6 @@ $font-size-base: 16px;
   align-items: $align;
 }
 
-// // PADDING
-// $pI: 0;
-
-// @while $pI <= 100 {
-//   .g-#{$pI} {
-//     gap: toRem($pI);
-//   }
-
-//   $pI: $pI + 1;
-// }
-
-// // GAP
-// $gapI: 0;
-
-// @while $gapI <= 100 {
-//   .g-#{$gapI} {
-//     gap: toRem($gapI);
-//   }
-
-//   $gapI: $gapI + 1;
-// }
-
 @mixin rounded($radius: 30) {
   border-radius: $radius;
 }
