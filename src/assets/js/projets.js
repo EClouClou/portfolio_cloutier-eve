@@ -6,7 +6,6 @@ const generateModalContent = (projet) => {
   const contenuHolder = document.querySelector(".modale-contenu");
   const closeBtn = document.querySelector("[data-modal-close]");
   const header = holder.querySelector("header");
-  // const contact = contact.querySelector(".footer__contact");
 
   // Réinitialiser le contenu de la modale
   contenuHolder.innerHTML = "";
@@ -37,7 +36,6 @@ const generateModalContent = (projet) => {
   const img = document.createElement("img");
   img.src = projet.imgModal;
   img.alt = projet.imgAlt;
-  img.classList.add("card-shadow");
   contenuHolder.append(img);
 
   // Conteneur d'informations

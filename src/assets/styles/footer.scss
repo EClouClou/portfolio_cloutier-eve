@@ -7,6 +7,7 @@
     @include mixins.border-b();
     @include mixins.tablet {
       padding-top: 5.1875rem;
+      padding-bottom: 3rem;
     }
 
     & h2 {
@@ -18,7 +19,10 @@
       position: relative;
       z-index: 1;
       @include mixins.tablet {
-        transform: translateY(46px);
+        transform: translateY(84px);
+      }
+      @include mixins.desktop {
+        transform: translateY(84px);
       }
     }
   }
@@ -77,11 +81,14 @@
     @include mixins.flex-center();
     order: 1;
     gap: 3.125rem;
+    padding-bottom: 3rem;
     @include mixins.tablet {
       order: 2;
+      padding-bottom: 0rem;
     }
     @include mixins.desktop {
       order: 1;
+      padding-right: 1rem;
     }
   }
 
@@ -119,12 +126,13 @@
       list-style-type: none;
       @include mixins.tablet {
         @include mixins.flex-center(column);
+        display: none;
         align-items: end;
         gap: 0.35rem;
       }
       @include mixins.desktop {
         @include mixins.flex-center();
-        gap: 2.5rem;
+        gap: 0.055rem;
       }
     }
   }
