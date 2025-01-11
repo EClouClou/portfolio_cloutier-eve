@@ -6,7 +6,7 @@
   &__title {
     @include mixins.border-b();
     @include mixins.tablet {
-      padding-top: 5.1875rem;
+      // padding-top: 5.1875rem;
       padding-bottom: 3rem;
     }
 
@@ -40,6 +40,7 @@
     @include mixins.flex-center(column, space-between);
     gap: 2.1875rem;
     @include mixins.desktop {
+      padding: 1rem;
       @include mixins.flex-center(column, space-between, flex-start);
     }
   }

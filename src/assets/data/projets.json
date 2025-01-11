@@ -18,7 +18,9 @@
       "behance": "https://www.behance.net/gallery/216120201/Portfolio-Eve-Cloutier"
     },
     "stack": ["figma", "illustrator"],
-    "gridArea": 1
+    "gridArea": 1,
+    "smooth": true,
+    "multiplier": 1.2
   },
   {
     "id": "2",
