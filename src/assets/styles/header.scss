@@ -4,6 +4,15 @@
 
 @use "grid";
 
+.theme {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 2rem;
+  z-index: 1000;
+}
+
 .navbar {
   @include mixins.flex-center;
 

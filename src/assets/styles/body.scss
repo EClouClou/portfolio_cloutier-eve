@@ -16,6 +16,7 @@
 
 body {
   background-color: var.$color-p-gray;
+  position: relative;
   padding: 2rem;
   margin: 0 auto;
   width: 100%;
@@ -23,6 +24,93 @@ body {
   box-sizing: border-box;
   @include mixins.tablet {
     padding: 3.625rem 4.375rem;
+  }
+
+  &.dark-mode {
+    background-color: var.$color-black;
+    h1,
+    h4,
+    h5,
+    ul,
+    li,
+    a {
+      color: var.$color-offWhite;
+    }
+
+    header {
+      .navbar__link {
+        color: var.$color-offWhite;
+
+        &:hover,
+        &:active {
+          color: var.$color-black;
+        }
+      }
+
+      .navbar__img {
+        filter: invert(1) brightness(2);
+      }
+
+      .hero__logo {
+        filter: invert(1) brightness(2);
+      }
+
+      .hero__wrapper {
+        .header__arrow {
+          img {
+            filter: invert(1) brightness(2);
+            opacity: 0.75;
+          }
+        }
+      }
+    }
+
+    main {
+      .transition,
+      .final {
+        filter: invert(1) brightness(2);
+        opacity: 0.75;
+      }
+
+      .projets-holder {
+        border-top: 0.25px solid var.$color-offWhite;
+      }
+
+      .about {
+        &__introduction,
+        &__profile,
+        &__skills {
+          border-top: 0.25px solid var.$color-offWhite;
+        }
+      }
+
+      .subtitle1 li {
+        color: var.$color-black;
+      }
+
+      .liensHolder {
+        color: var.$color-black;
+      }
+    }
+
+    .footer {
+      &__title {
+        border-bottom: 0.25px solid var.$color-offWhite;
+      }
+
+      .footer__link {
+        color: var.$color-offWhite;
+
+        &:hover,
+        &:active {
+          color: var.$color-black;
+        }
+      }
+
+      img {
+        filter: invert(1) brightness(2);
+      }
+    }
   }
 }
 

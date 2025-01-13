@@ -9,6 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/dialog.js" defer type="module"></script>
+    <script src="./assets/js/dark-mode.js" defer type="module"></script>
     <script src="./assets/js/locomotive.js" defer type="module"></script>
     <script
       type="module"
@@ -22,6 +23,11 @@
   </head>
   <body data-scroll-container>
     <header class="header">
+      <div class="theme">
+        <button>
+          <a id="dark" class="dark" href="#dark" alt="Dark">Sombre</a>
+        </button>
+      </div>
       <div class="navbar">
         <div class="navbar__brand">
           <img
@@ -243,18 +249,18 @@
               target="_blank"
               class="footer__email"
               ><i class="fa-solid fa-envelope"></i>
-              <h6>ecloutier40@outlook.com</h6></a
+              <h5>ecloutier40@outlook.com</h5></a
             >
             <a href="tel:+14182649826" target="_blank" class="footer__phone"
               ><i class="fa-solid fa-phone"></i>
-              <h6>418 264-9826</h6></a
+              <h5>418 264-9826</h5></a
             >
             <a
               href="https://www.linkedin.com/in/eve-cloutier-656b7b227/"
               target="_blank"
               class="footer__linkedin"
               ><i class="fa-brands fa-linkedin"></i>
-              <h6>eve-cloutier-656b7b227</h6></a
+              <h5>eve-cloutier-656b7b227</h5></a
             >
           </div>
           <div class="footer__connections">
@@ -303,7 +309,7 @@
                   >
                 </li>
                 <li>
-                  <a class="navbar__link" href="#contact" alt="Contact"
+                  <a class="footer__link" href="#contact" alt="Contact"
                     >Contact</a
                   >
                 </li>
