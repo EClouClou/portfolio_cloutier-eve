@@ -59,6 +59,16 @@
   }
 }
 
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
 .burger-nav__btn--close {
   cursor: pointer;
 

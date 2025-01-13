@@ -74,7 +74,7 @@
     @include mixins.desktop {
       display: grid;
       grid-template-columns: 25% 54% 21%;
-      align-items: start;
+      align-items: stretch;
     }
   }
 }
@@ -85,7 +85,7 @@
     display: grid;
     grid-template-columns: 25% 54% 21%;
     @include mixins.tablet {
-      width: 772px;
+      // width: 772px;
     }
     @include mixins.desktop {
       width: 1140px;
@@ -216,6 +216,7 @@
   height: 100vh;
   width: 100vw;
   z-index: 100;
+  overscroll-behavior: contain;
 
   header {
     position: relative;
@@ -466,4 +467,8 @@
 
 .scroll-class {
   opacity: 1;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

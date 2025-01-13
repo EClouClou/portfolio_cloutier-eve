@@ -9,33 +9,48 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/dialog.js" defer type="module"></script>
+    <script src="./assets/js/header.js" defer type="module"></script>
     <script src="./assets/js/dark-mode.js" defer type="module"></script>
     <script src="./assets/js/locomotive.js" defer type="module"></script>
-    <script
-      type="module"
-      src="./assets/js/index.js"
-      defer
-      type="module"
-      r
-    ></script>
+    <script src="./assets/js/index.js" defer type="module" r></script>
+    <script src="./assets/js/loader.js" defer type="module" r></script>
+    <script src="./assets/js/scroll.js" defer type="module" r></script>
 
     <title>porfolio | Eve Cloutier</title>
   </head>
   <body data-scroll-container>
-    <header class="header">
-      <div class="theme">
-        <button>
-          <a id="dark" class="dark" href="#dark" alt="Dark">Sombre</a>
-        </button>
+    <div id="loader">
+      <div class="lds-default">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
+    </div>
+
+    <header class="header">
       <div class="navbar">
         <div class="navbar__brand">
-          <img
-            class="navbar__img"
-            src="./static/img/logo-eve-noir.svg"
-            alt="Logo Eve Cloutier"
-          />
-          <h5 class="navbar__name">Eve Cloutier</h5>
+          <div class="navbar__logo">
+            <img
+              class="navbar__img"
+              src="./static/img/logo-eve-noir.svg"
+              alt="Logo Eve Cloutier"
+            />
+            <h5 class="navbar__name">Eve Cloutier</h5>
+          </div>
+          <h4>
+            DESIGN GRAPHIQUE • <br />
+            INTÉGRATION WEB
+          </h4>
         </div>
         <div class="navbar__list">
           <ul>
@@ -48,18 +63,23 @@
               >
             </li>
             <li>
-              <a
-                class="navbar__link"
-                href="./static/img/Curriculum vitae - Eve Cloutier.pdf"
-                target="_blank"
-                alt="CV"
-                >CV</a
-              >
-            </li>
-            <li>
               <a class="navbar__link" href="#contact" alt="Contact">Contact</a>
             </li>
           </ul>
+
+          <div class="navbar__subtitle">
+            <a class="navbar__mode">Basculer le mode</a>
+            <img
+              class="navbar__arrow"
+              src="./static/img/arrow-4.svg"
+              alt="Basculer entre le mode sombre et le mode clair"
+            />
+            <div class="navbar__dark">
+              <a id="dark" class="dark" href="#dark" alt="Dark"
+                ><i class="fa-solid fa-circle-half-stroke"></i
+              ></a>
+            </div>
+          </div>
         </div>
         <div class="navbar__menu">
           <!-- Bouton fermer -->
@@ -103,15 +123,6 @@
                 >
               </li>
               <li>
-                <a
-                  class="burger-nav__link"
-                  href="./static/img/CV_EC 2024.pdf"
-                  target="_blank"
-                  alt="CV"
-                  >CV</a
-                >
-              </li>
-              <li>
                 <a class="burger-nav__link" href="#contact" alt="Contact"
                   >Contact</a
                 >
@@ -146,6 +157,9 @@
           />
         </section>
       </div>
+      <button id="backToTop" class="show">
+        <img src="./static/img/arrow-4.svg" alt="Flèche haut" />
+      </button>
     </header>
     <main>
       <section id="about" class="about">
@@ -155,8 +169,9 @@
         <div class="about__introduction">
           <div class="about__description">
             <h4>
-              Curieuse de nature, passionnée pour l'art graphique et le Web, je
-              suis motivée par les nouveaux défis!
+              Curieuse et passionnée par le design graphique et la conception
+              Web, je mets mon dynamisme et ma motivation au service de chaque
+              projet!
             </h4>
             <h4>
               Je m'engage à donner le meilleur de moi-même et à fournir des
@@ -167,24 +182,26 @@
             <img src="./static/img/photo-eve.jpg" alt="Photo de Eve Cloutier" />
           </div>
         </div>
-        <div class="about__profile">
-          <h4 class="about_profile-title">Profil</h4>
-          <div class="about__profile-description">
-            <h5>
-              Débrouillardise • Initiative • Rigueur • Créativité • Souci du
-              détail • Polyvalence • Maîtrise du français • Esprit d’équipe •
-              Capacité d’adaptation
-            </h5>
+        <div class="about__center">
+          <div class="about__profile">
+            <h4 class="about_profile-title">Profil</h4>
+            <div class="about__profile-description">
+              <h5>
+                Débrouillardise • Initiative • Rigueur • Créativité • Souci du
+                détail • Polyvalence • Maîtrise du français • Esprit d’équipe •
+                Capacité d’adaptation
+              </h5>
+            </div>
           </div>
-        </div>
-        <div class="about__skills">
-          <h4 class="about_skills-title">Compétences</h4>
-          <div class="about__skills-description">
-            <h5>
-              Suite Adobe • UX • UI • Figma • HTML • CSS • SASS • LESS •Tailwind
-              • Bootstrap • JavaScript • PHP • React • Wix • WordPress • Shopify
-              • MySQL • Suite Microsoft
-            </h5>
+          <div class="about__skills">
+            <h4 class="about_skills-title">Compétences</h4>
+            <div class="about__skills-description">
+              <h5>
+                Suite Adobe • UX • UI • Figma • HTML • CSS • SASS • LESS
+                •Tailwind • Bootstrap • JavaScript • PHP • React • Wix •
+                WordPress • Shopify • MySQL • Suite Microsoft
+              </h5>
+            </div>
           </div>
         </div>
       </section>
@@ -297,20 +314,6 @@
                 <li>
                   <a class="footer__link" href="#achievement" alt="Réalisations"
                     >Réalisations</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="footer__link"
-                    href="./static/img/Curriculum vitae - Eve Cloutier.pdf"
-                    target="_blank"
-                    alt="CV"
-                    >CV</a
-                  >
-                </li>
-                <li>
-                  <a class="footer__link" href="#contact" alt="Contact"
-                    >Contact</a
                   >
                 </li>
               </ul>

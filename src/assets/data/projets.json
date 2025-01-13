@@ -114,7 +114,7 @@
     "category": "maquette",
     "kind": "maquette desktop",
     "imgCard": "./static/img/papeterie-plus-maquette-card.jpg",
-    "imgModal": "./static/img/papeterie-plus-maquette.jpg",
+    "imgModal": "./static/img/papeterie-plus-maquette-card.jpg",
     "imgAlt": "Maquette Papeterie Plus inc.",
     "description": "Concevoir une interface desktop d’un produit qui se retrouve en vente sur le site Web de type e-commerce (site transactionnel en ligne) de la compagnie Papeterie Plus inc. L’entreprise désire mettre en valeur l’inventaire de ses fournitures de bureau disponibles dans leur entrepôt.",
     "liens": {

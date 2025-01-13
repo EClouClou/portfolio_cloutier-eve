@@ -82,12 +82,7 @@
     @include mixins.flex-center();
     order: 1;
     gap: 3.125rem;
-    padding-bottom: 3rem;
     @include mixins.tablet {
-      order: 2;
-      padding-bottom: 0rem;
-    }
-    @include mixins.desktop {
       order: 1;
       padding-right: 1rem;
     }
@@ -96,12 +91,6 @@
   &__nav {
     @include mixins.flex-center(column);
     order: 2;
-    @include mixins.tablet {
-      order: 1;
-    }
-    @include mixins.desktop {
-      order: 2;
-    }
 
     & a {
       color: var.$color-black;
@@ -126,10 +115,8 @@
       display: none;
       list-style-type: none;
       @include mixins.tablet {
-        @include mixins.flex-center(column);
-        display: none;
-        align-items: end;
-        gap: 0.35rem;
+        @include mixins.flex-center();
+        gap: 0.055rem;
       }
       @include mixins.desktop {
         @include mixins.flex-center();

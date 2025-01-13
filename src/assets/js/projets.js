@@ -1,11 +1,30 @@
 import projets from "../data/projets.json";
 
+// Fonction pour désactiver le scroll du body
+const disableScroll = () => {
+  document.body.classList.add("no-scroll");
+};
+
+// Fonction pour réactiver le scroll du body
+const enableScroll = () => {
+  document.body.classList.remove("no-scroll");
+};
+
 // Fonction pour générer le contenu de la modale
 const generateModalContent = (projet) => {
   const holder = document.querySelector(".modale-holder");
   const contenuHolder = document.querySelector(".modale-contenu");
   const closeBtn = document.querySelector("[data-modal-close]");
   const header = holder.querySelector("header");
+
+  // Vérifie que tous les éléments nécessaires existent
+  if (!holder || !contenuHolder || !closeBtn || !header) {
+    console.error("Éléments manquants pour la génération de la modale.");
+    return;
+  }
+
+  // Désactive le scroll lorsque la modale est ouverte
+  disableScroll();
 
   // Réinitialiser le contenu de la modale
   contenuHolder.innerHTML = "";
@@ -108,9 +127,22 @@ const generateModalContent = (projet) => {
   holder.classList.remove("hidden");
 
   // Fermeture de la modale
-  closeBtn.addEventListener("click", () => holder.classList.add("hidden"), {
-    once: true, // Empêche l'ajout multiple d'écouteurs
-  });
+  //   closeBtn.addEventListener("click", () => holder.classList.add("hidden"), {
+  //     once: true, // Empêche l'ajout multiple d'écouteurs
+  //   });
+  // };
+
+  // Fermeture de la modale
+  closeBtn.addEventListener(
+    "click",
+    () => {
+      holder.classList.add("hidden");
+      enableScroll(); // Réactiver le scroll
+    },
+    {
+      once: true,
+    }
+  );
 };
 
 // Fonction pour générer la liste des projets

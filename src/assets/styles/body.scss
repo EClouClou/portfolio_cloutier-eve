@@ -23,7 +23,10 @@ body {
   max-width: 1440px;
   box-sizing: border-box;
   @include mixins.tablet {
-    padding: 3.625rem 4.375rem;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  @include mixins.desktop {
+    padding: 2rem;
   }
 
   &.dark-mode {
@@ -37,6 +40,10 @@ body {
       color: var.$color-offWhite;
     }
 
+    .overlay--close {
+      background-color: var.$color-black;
+    }
+
     header {
       .navbar__link {
         color: var.$color-offWhite;
@@ -47,8 +54,13 @@ body {
         }
       }
 
-      .navbar__img {
-        filter: invert(1) brightness(2);
+      .navbar {
+        &__img,
+        &__dark,
+        &__menu,
+        &__arrow {
+          filter: invert(1) brightness(2);
+        }
       }
 
       .hero__logo {
@@ -65,6 +77,11 @@ body {
       }
     }
 
+    #backToTop {
+      filter: invert(1) brightness(2);
+      opacity: 0.75;
+    }
+
     main {
       .transition,
       .final {
@@ -74,6 +91,12 @@ body {
 
       .projets-holder {
         border-top: 0.25px solid var.$color-offWhite;
+
+        & > button {
+          &:hover {
+            @include mixins.card-hover-shadow-dark;
+          }
+        }
       }
 
       .about {
@@ -111,6 +134,26 @@ body {
         filter: invert(1) brightness(2);
       }
     }
+  }
+}
+
+#backToTop {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 2rem;
+  display: none;
+  padding: 0.5rem;
+  right: 0;
+  cursor: pointer;
+  z-index: 100;
+
+  &.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 }
 

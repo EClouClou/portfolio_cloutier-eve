@@ -4,32 +4,25 @@
 
 @use "grid";
 
-.theme {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-right: 2rem;
-  z-index: 1000;
-}
-
 .navbar {
-  @include mixins.flex-center;
+  @include mixins.flex-center();
+  @include mixins.tablet {
+    @include mixins.flex-center($align: flex-start);
+  }
 
   &__item {
     @include mixins.transition();
   }
 
   & a {
-    color: var.$color-black;
-    padding: 1rem;
-
     &:link {
       color: var.$color-black;
+      padding: 1rem;
+      scroll-behavior: smooth;
     }
 
-    &:hover,
-    &:active {
+    &:hover:not(#dark),
+    &:active:not(#dark) {
       background-color: var.$color-beige;
       border-radius: 10px;
     }
@@ -44,7 +37,8 @@
   }
 
   &__brand {
-    @include mixins.flex-center;
+    @include mixins.flex-center($direction: column, $align: flex-start);
+    padding: 1rem 0 1rem 1rem;
     gap: 1.5rem;
   }
 
@@ -62,6 +56,13 @@
     @include mixins.tablet {
       display: none;
     }
+
+    &-fixed {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
   }
 
   &__list {
@@ -69,11 +70,35 @@
       display: none;
       flex-direction: row;
       gap: 2.625rem;
-      padding: 1.45rem;
+      padding: 1rem;
       list-style-type: none;
       @include mixins.tablet {
         display: flex;
       }
+    }
+  }
+
+  &__logo {
+    @include mixins.flex-center();
+    gap: 1.5rem;
+  }
+
+  &__subtitle {
+    @include mixins.flex-center($justify: flex-end);
+    gap: 1rem;
+  }
+
+  &__arrow {
+    transform: rotate(90deg);
+  }
+
+  &__dark {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 2rem;
+    @include mixins.tablet {
+      padding-right: 1rem;
+      padding-left: 0;
     }
   }
 }
