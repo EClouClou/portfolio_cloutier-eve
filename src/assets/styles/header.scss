@@ -5,7 +5,7 @@
 @use "grid";
 
 .navbar {
-  @include mixins.flex-center();
+  @include mixins.flex-center($align: flex-start);
   @include mixins.tablet {
     @include mixins.flex-center($align: flex-start);
   }
@@ -18,11 +18,10 @@
     &:link {
       color: var.$color-black;
       padding: 1rem;
-      scroll-behavior: smooth;
     }
 
-    &:hover:not(#dark),
-    &:active:not(#dark) {
+    &:hover:not(#dark, .navbar__mode),
+    &:active:not(#dark, .navbar__mode) {
       background-color: var.$color-beige;
       border-radius: 10px;
     }
@@ -53,6 +52,7 @@
 
   &__menu {
     display: flex;
+    padding-top: 0.75rem;
     @include mixins.tablet {
       display: none;
     }
@@ -84,12 +84,25 @@
   }
 
   &__subtitle {
-    @include mixins.flex-center($justify: flex-end);
-    gap: 1rem;
+    @include mixins.tablet {
+      @include mixins.flex-center($justify: flex-end);
+      gap: 0.4rem;
+    }
+  }
+
+  &__mode {
+    display: none;
+    @include mixins.tablet {
+      display: inline-flex;
+    }
   }
 
   &__arrow {
-    transform: rotate(90deg);
+    display: none;
+    @include mixins.tablet {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
   }
 
   &__dark {

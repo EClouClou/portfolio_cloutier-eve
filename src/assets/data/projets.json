@@ -200,7 +200,8 @@
     "description": "À partir de maquettes, réaliser un micro-site responsive présentant le groupe Delazur. ",
     "date": "2023-12-20",
     "liens": {
-      "github": "https://github.com/jams1810/delazur_equipe3.git"
+      "github": "https://github.com/EClouClou/delazur.git",
+      "Vercel": "https://delazur.vercel.app/"
     },
     "stack": ["html", "css", "javascript", "git", "github"],
     "gridArea": 11
