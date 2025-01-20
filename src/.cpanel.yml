@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/evecrjte/repositories/portfolio_cloutier-eve/
-    - /bin/cp -r * $DEPLOYPATH
