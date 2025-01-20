@@ -1,11 +1,14 @@
 {
   "name": "model_parcel_sass",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html"
+    "createBuild": "mkdir ./build",
+    "buildProject": "parcel build src/index.html --dist-dir build",
+    "createStatic": "mkdir ./build/static",
+    "copieFiles": "cp -r ./src/static ./build",
+    "build": "npm run createBuild && npm run buildProject && npm run createStatic && npm run copieFiles"
   },
   "keywords": [],
   "author": "",

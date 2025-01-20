@@ -1,0 +1,2 @@
+document.getElementById("dark").addEventListener("click",function(e){e.preventDefault(),document.body.classList.toggle("dark-mode")}),document.querySelector(".navbar__arrow").addEventListener("mouseover",e=>{e.target.classList.add("animate__animated","animate__headShake")}),document.querySelector(".navbar__arrow").addEventListener("animationend",e=>{e.target.classList.remove("animate__animated","animate__headShake")});
+//# sourceMappingURL=index.31618704.js.map
